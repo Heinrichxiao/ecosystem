@@ -1,11 +1,13 @@
 class Food extends PVector {
-  float size;
+  float strength;
   float maxStrength;
+  float size;
   boolean isEaten;
   
   Food(PVector pos) {
     set(pos.x, pos.y);
-    size = 16;
+    strength = 1;
+    size = strength * 2.5;
     isEaten = false;
     maxStrength = random(5, 10);
   }
@@ -15,9 +17,10 @@ class Food extends PVector {
   }
   
   void update() {
-    size += 5;
-    if (size >= maxStrength) {
-      size = maxStrength;
+    strength += 1;
+    size = strength * 1.5;
+    if (strength >= maxStrength) {
+      strength = maxStrength;
     }
   }
   

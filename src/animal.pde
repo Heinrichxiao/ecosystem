@@ -51,7 +51,7 @@ class Animal extends PVector {
     for (Food food : foods) {
       if (canEat(food)) {
         food.eat();
-        hunger -= food.size / 10;
+        hunger -= food.strength / 10;
       }
     }
     hunger += 0.025;

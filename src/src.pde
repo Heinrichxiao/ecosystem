@@ -18,7 +18,7 @@ void setup() {
     addFood();
   }
   frameRate(240);
-  //noCursor();
+  noCursor();
 }
 
 
